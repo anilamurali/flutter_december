@@ -14,7 +14,7 @@ class ListDemo extends StatelessWidget{
           Center(child: Text("My Contacts", style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),),
           
           Card(color: Colors.red,child: ListTile(
-            leading: Image(image: AssetImage("assets/images/amal.JPG")),
+            leading: CircleAvatar(backgroundImage:  AssetImage("assets/images/amal.JPG")),
             title: Text("Amal Vijay"),
             subtitle: Text("9207099797"),
             trailing: Icon(Icons.phone),
@@ -26,9 +26,27 @@ class ListDemo extends StatelessWidget{
             trailing: Icon(Icons.phone),
           ),),
           Card(color: Colors.red,child: ListTile(
-            leading: Image(image: AssetImage("assets/images/background1.jpeg")),
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/images/anandu.jpeg")),
             title: Text("Anandu Krishnan"),
             subtitle: Text("9035938376"),
+            trailing: Icon(Icons.phone),
+          ),),
+          Card(color: Colors.red,child: ListTile(
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/images/anju.jpg")),
+            title: Text("Anju Lekshmi"),
+            subtitle: Text("8921656557"),
+            trailing: Icon(Icons.phone),
+          ),),
+          Card(color: Colors.red,child: ListTile(
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/images/background1.jpeg")),
+            title: Text("Anandu Krishnan"),
+            subtitle: Text("9035938376"),
+            trailing: Icon(Icons.phone),
+          ),),
+          Card(color: Colors.red,child: ListTile(
+            leading: CircleAvatar(backgroundImage: AssetImage("assets/images/lachu.jpg")),
+            title: Text("Lakshmi S Nair"),
+            subtitle: Text("9207600213"),
             trailing: Icon(Icons.phone),
           ),),
           
