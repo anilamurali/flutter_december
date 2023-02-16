@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'homepage.dart';
 
 
+
 class LoginPage extends StatefulWidget{
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -39,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                   return "Enter a valid Email ";
                 }
                 else{
-                  return null;
+                 return null;
                 }
               },
             ),
@@ -85,8 +86,9 @@ class _LoginPageState extends State<LoginPage> {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
               }
               else{
+                
                 return null;
-              } 
+                        } 
             }, child: Text("Login")),
           ),
         const  Padding(

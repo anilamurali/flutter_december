@@ -47,18 +47,28 @@
 
 import 'dart:async';
 
+
+import 'package:device_preview/device_preview.dart';
 import 'package:fluter_december/listdemo.dart';
 import 'package:fluter_december/second.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:device_preview/device_preview.dart';
 
+import 'listview_builder.dart';
+import 'listview_seprated.dart';
 import 'loginpage.dart';
 
 void main(){
-  runApp(MaterialApp(
-    theme: ThemeData(primarySwatch: Colors.green),
-    debugShowCheckedModeBanner: false,      
-    home: SplashScreen(),
-  ));
+  runApp(DevicePreview(builder: (context){
+    enabled: !kReleaseMode;
+    return MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home: SplashScreen(),);
+    
+  }));
 }
 
 class SplashScreen extends StatefulWidget {
@@ -71,7 +81,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ListDemo()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ListSeparator()));
     });
   }
   @override
