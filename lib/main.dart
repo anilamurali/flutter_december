@@ -46,10 +46,9 @@
 
 
 import 'dart:async';
-
-
 import 'package:device_preview/device_preview.dart';
 import 'package:fluter_december/listdemo.dart';
+import 'package:fluter_december/phonelist.dart';
 import 'package:fluter_december/second.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -63,6 +62,7 @@ void main(){
   runApp(DevicePreview(builder: (context){
     enabled: !kReleaseMode;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
@@ -81,7 +81,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ListSeparator()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ListWithBuilder()));
     });
   }
   @override
