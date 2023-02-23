@@ -23,7 +23,6 @@ class ListWithBuilder extends StatelessWidget{
       return Card(
         color: Color.fromARGB(255, 185, 153, 190),
         child: ListTile(
-      
           leading: Image(image: NetworkImage(phoneimg[index]),height: 100,width: 100,),
           title: Text(phone[index],textAlign: TextAlign.center,),
           subtitle: Text(description[index],textAlign: TextAlign.center,),
