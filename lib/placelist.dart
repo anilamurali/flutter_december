@@ -23,9 +23,13 @@ class PlaceList extends StatelessWidget{
         return Card(
           child: ListTile(
             leading: Container(
-              height: 100,
-              width: 100,
-              child: Image(image: NetworkImage(placeimg[index],))),
+              width: 80,
+              decoration: BoxDecoration(
+                image: DecorationImage(image: NetworkImage(placeimg[index],))
+                
+              ),
+              ),
+
             title: Text(place[index],style: TextStyle(fontWeight: FontWeight.bold),),
             subtitle: Text("${subtitle[index]}\n${sectitle[index]}"),
             

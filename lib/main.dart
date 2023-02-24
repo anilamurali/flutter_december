@@ -50,6 +50,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:fluter_december/costomlist.dart';
 import 'package:fluter_december/listdemo.dart';
 import 'package:fluter_december/phonelist.dart';
+import 'package:fluter_december/placelist.dart';
+import 'package:fluter_december/productlist.dart';
 import 'package:fluter_december/second.dart';
 import 'package:fluter_december/snackdemo.dart';
 import 'package:flutter/foundation.dart';
@@ -83,7 +85,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>List_with_Coustom()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ProductList()));
     });
   }
   @override
