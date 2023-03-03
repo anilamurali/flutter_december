@@ -8,7 +8,8 @@ class GridViewExample extends StatelessWidget{
   var color=[Colors.blue,
             Colors.orange,
             Colors.green,
-            Colors.blueAccent,
+            Color.fromARGB(255, 224, 87, 77),
+            Color.fromARGB(255, 41, 79, 145),
             Colors.purpleAccent,
             Color.fromARGB(255, 16, 131, 116),
             Colors.yellow,
@@ -26,24 +27,33 @@ class GridViewExample extends StatelessWidget{
               FontAwesomeIcons.map,
               FontAwesomeIcons.microchip,
               FontAwesomeIcons.microphoneLines,
-              FontAwesomeIcons.fileCirclePlus];
+              FontAwesomeIcons.fileCirclePlus,
+              FontAwesomeIcons.music];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("GRID VIEW"),),
+      appBar: AppBar(title: const Text("GRID VIEW"),),
       body: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        childAspectRatio: 1.0),
-          itemCount: 11,        
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 20,
+        childAspectRatio: 2),
+          itemCount: 12,        
          itemBuilder: (context,index){
           return  Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 10,right: 10,top: 20),
             child: Container(
-              height: 30,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),color: color[index]),
+                borderRadius: BorderRadius.circular(20),color: color[index],
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 10,
+                    spreadRadius: 4,
+                    offset:Offset(5, 5) 
+                  )
+                ]
+                ),
                 child: Center(
                   child: ListTile(
                     

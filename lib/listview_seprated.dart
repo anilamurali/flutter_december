@@ -7,7 +7,7 @@ class ListSeparator extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Listview with Separated"),),
+      appBar: AppBar(title: const Text("Listview with Separated"),),
       body: ListView.separated(
         itemCount: datas.length,
         itemBuilder: (BuildContext,index){

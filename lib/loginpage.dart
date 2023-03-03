@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.only(left: 10,right: 10,top: 20),
             child: TextFormField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.perm_contact_cal_rounded),
+                prefixIcon: const Icon(Icons.perm_contact_cal_rounded),
                 labelText: "User",
                 hintText: "Username",
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),

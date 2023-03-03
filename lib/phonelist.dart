@@ -21,7 +21,7 @@ class ListWithBuilder extends StatelessWidget{
       itemCount: phone.length,
       itemBuilder: (context,index){
       return Card(
-        color: Color.fromARGB(255, 185, 153, 190),
+        color: const Color.fromARGB(255, 185, 153, 190),
         child: ListTile(
           leading: Container(
             width: 80,

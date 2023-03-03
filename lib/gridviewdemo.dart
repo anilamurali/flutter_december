@@ -13,13 +13,13 @@ class GridViewDemo extends StatelessWidget{
     //     ),
     //   );
     // }),),
-    body: GridView(gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+    body: GridView(gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
       maxCrossAxisExtent: 70,
       mainAxisSpacing: 20,
       crossAxisSpacing: 20
       ,childAspectRatio: 1.0),
     children:List.generate(10, (index){
-      return Card(
+      return const Card(
         child: Center(
           child: Image(image: AssetImage("assets/images/anila.JPG")),
         ),

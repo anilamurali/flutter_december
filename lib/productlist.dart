@@ -68,11 +68,11 @@ class ProductList extends StatelessWidget{
                     maxLines: 1,
                     text:  TextSpan(
                       text: "Price :",
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                       children: [
                         TextSpan(
                           text: "\$${prize[index]}",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         )
                       ]
              
