@@ -55,11 +55,15 @@ import 'package:fluter_december/gridviewassignment.dart';
 import 'package:fluter_december/gridviewdemo.dart';
 import 'package:fluter_december/gridwithcount.dart';
 import 'package:fluter_december/listdemo.dart';
+import 'package:fluter_december/lottieanimation.dart';
 import 'package:fluter_december/phonelist.dart';
 import 'package:fluter_december/placelist.dart';
 import 'package:fluter_december/productlist.dart';
 import 'package:fluter_december/second.dart';
+import 'package:fluter_december/signup_confirmpass.dart';
 import 'package:fluter_december/snackdemo.dart';
+import 'package:fluter_december/tab_in_flutter.dart';
+import 'package:fluter_december/whatsapp_UI/mainpage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -74,6 +78,9 @@ void main(){
   runApp(DevicePreview(builder: (context){
     enabled: !kReleaseMode;
     return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(primary: Color(0XFF2E7D32))
+      ),
       debugShowCheckedModeBanner: false,
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
@@ -93,7 +100,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>GridView_UI()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>WhatsAppMainPage()));
     });
   }
   @override
